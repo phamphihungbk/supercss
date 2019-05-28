@@ -1,0 +1,30 @@
+/*
+Author: Hung Pham
+ */
+@import 'media-queries';
+
+.static { position: static; }
+.relative  { position: relative; }
+.absolute  { position: absolute; }
+.fixed  { position: fixed; }
+
+@include breakpoint-small(){
+  .static-s { position: static; }
+  .relative-s  { position: relative; }
+  .absolute-s  { position: absolute; }
+  .fixed-s  { position: fixed; }
+}
+
+@include breakpoint-medium(){
+  .static-m { position: static; }
+  .relative-m  { position: relative; }
+  .absolute-m  { position: absolute; }
+  .fixed-m  { position: fixed; }
+}
+
+@include breakpoint-large(){
+  .static-l { position: static; }
+  .relative-l  { position: relative; }
+  .absolute-l  { position: absolute; }
+  .fixed-l  { position: fixed; }
+}
