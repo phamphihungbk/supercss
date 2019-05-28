@@ -1,5 +1,8 @@
 const path = require('path');
 const ExtractCSS = require('mini-css-extract-plugin');
+const MinifyCSS = require('optimize-css-assets-webpack-plugin');
+
+
 
 module.exports = {
     mode: 'production',
@@ -7,6 +10,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'release/'),
         filename: 'app.min.js'
+    },
+    optimization: {
+        minimizer: [new MinifyCSS({})],
     },
     plugins: [
         new ExtractCSS({
