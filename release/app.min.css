@@ -345,22 +345,15 @@ Author: Hung Pham
     position: fixed; } }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
+/* Variable for breakpoint */
+/* Media Query */
 .flex {
   display: flex; }
 
 .inline-flex {
   display: inline-flex; }
-
-/* 1. Fix for Chrome 44 bug.
- * https://code.google.com/p/chromium/issues/detail?id=506893 */
-.flex-auto {
-  flex: 1 1 auto;
-  min-width: 0;
-  /* 1 */
-  min-height: 0;
-  /* 1 */ }
 
 .flex-none {
   flex: none; }
@@ -491,10 +484,29 @@ Author: Hung Pham
 .flex-shrink-1 {
   flex-shrink: 1; }
 
+@media screen and (max-width: 425px) {
+  .flex-column-s {
+    flex-direction: column; }
+  .flex-row-s {
+    flex-direction: row; } }
+
+@media screen and (min-width: 425px) {
+  .flex-column-m {
+    flex-direction: column; }
+  .flex-row-m {
+    flex-direction: row; } }
+
+@media screen and (min-width: 1024px) {
+  .flex-column-l {
+    flex-direction: column; }
+  .flex-row-l {
+    flex-direction: row; } }
+
 /*
-Author: Hung Pham
- */
-/* Height Scale */
+* Author: Hung Pham
+*/
+/* Variable for breakpoint */
+/* Media Query */
 .h1 {
   height: 1rem; }
 
@@ -510,7 +522,6 @@ Author: Hung Pham
 .h5 {
   height: 16rem; }
 
-/* Height Percentages - Based off of height of parent */
 .h-25 {
   height: 25%; }
 
@@ -526,7 +537,6 @@ Author: Hung Pham
 .min-h-100 {
   min-height: 100%; }
 
-/* Screen Height Percentage */
 .vh-25 {
   height: 25vh; }
 
@@ -542,16 +552,51 @@ Author: Hung Pham
 .min-vh-100 {
   min-height: 100vh; }
 
-/* String Properties */
 .h-auto {
   height: auto; }
 
 .h-inherit {
   height: inherit; }
 
+@media screen and (max-width: 425px) {
+  .h1-s {
+    height: 1rem; }
+  .h2-s {
+    height: 2rem; }
+  .h3-s {
+    height: 4rem; }
+  .h4-s {
+    height: 8rem; }
+  .h5-s {
+    height: 16rem; } }
+
+@media screen and (min-width: 425px) {
+  .h1-m {
+    height: 1rem; }
+  .h2-m {
+    height: 2rem; }
+  .h3-m {
+    height: 4rem; }
+  .h4-m {
+    height: 8rem; }
+  .h5-m {
+    height: 16rem; } }
+
+@media screen and (min-width: 1024px) {
+  .h1-l {
+    height: 1rem; }
+  .h2-l {
+    height: 2rem; }
+  .h3-l {
+    height: 4rem; }
+  .h4-l {
+    height: 8rem; }
+  .h5-l {
+    height: 16rem; } }
+
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 .lh-solid {
   line-height: 1; }
 
@@ -562,14 +607,11 @@ Author: Hung Pham
   line-height: 1.5; }
 
 /*
-Author: Hung Pham
-Idea: Tachyons CSS
- */
-/* Max Width Percentages */
+* Author: Hung Pham
+*/
 .mw-100 {
   max-width: 100%; }
 
-/* Max Width Scale */
 .mw1 {
   max-width: 1rem; }
 
@@ -602,8 +644,8 @@ Idea: Tachyons CSS
   max-width: none; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 /* Variable for breakpoint */
 /* Media Query */
 .w1 {
@@ -763,8 +805,8 @@ Author: Hung Pham
     width: 100%; } }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 .tl {
   text-align: left; }
 
@@ -778,8 +820,8 @@ Author: Hung Pham
   text-align: justify; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 .z-0 {
   z-index: 0; }
 
@@ -817,8 +859,8 @@ Author: Hung Pham
   z-index: unset; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 .top-0 {
   top: 0; }
 
@@ -878,12 +920,6 @@ Author: Hung Pham
 
 .left--2 {
   left: -2rem; }
-
-.absolute--fill {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
 
 /* Variables */
 .pa0 {
@@ -1255,8 +1291,8 @@ Author: Hung Pham
   margin-right: 16rem; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 /* Equivalent to .overflow-y-scroll */
 .overflow-container {
   overflow-y: scroll; }
@@ -1272,8 +1308,9 @@ Author: Hung Pham
   margin-left: auto; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+* Can put your shadow here if you wanna change it
+*/
 .shadow-1 {
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); }
 
@@ -1290,8 +1327,8 @@ Author: Hung Pham
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2); }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before,
@@ -1318,8 +1355,10 @@ Author: Hung Pham
   clear: none; }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
+/* Variable for breakpoint */
+/* Media Query */
 .dn {
   display: none; }
 
@@ -1353,17 +1392,33 @@ Author: Hung Pham
 .dt-column-group {
   display: table-column-group; }
 
-/*
-  This will set table to full width and then
-  all cells will be equal width
-*/
-.dt--fixed {
-  table-layout: fixed;
-  width: 100%; }
+@media screen and (max-width: 425px) {
+  .dn-s {
+    display: none; }
+  .di-s {
+    display: inline; }
+  .db-s {
+    display: block; } }
+
+@media screen and (min-width: 425px) {
+  .dn-m {
+    display: none; }
+  .di-m {
+    display: inline; }
+  .db-m {
+    display: block; } }
+
+@media screen and (min-width: 1024px) {
+  .dn-l {
+    display: none; }
+  .di-l {
+    display: inline; }
+  .db-l {
+    display: block; } }
 
 /*
-Author: Hung Pham
- */
+* Author: Hung Pham
+*/
 .normal {
   font-weight: normal; }
 
