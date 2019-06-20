@@ -9,6 +9,7 @@
   "author": "Hung Pham",
   "license": "ISC",
   "devDependencies": {
+    "brotli-webpack-plugin": "^1.1.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",

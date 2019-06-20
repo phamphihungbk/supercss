@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractCSS = require('mini-css-extract-plugin');
 const MinifyCSS = require('optimize-css-assets-webpack-plugin');
-
+const BrotliCompression = require('brotli-webpack-plugin');
 
 
 module.exports = {
@@ -16,9 +16,13 @@ module.exports = {
     },
     plugins: [
         new ExtractCSS({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
             filename: 'app.min.css',
+        }),
+        new BrotliCompression({
+            asset: '[path].br[query]',
+            test: /\.(js|css|html|svg)$/,
+            threshold: 10240,
+            minRatio: 0.8
         }),
     ],
     module: {
