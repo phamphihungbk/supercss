@@ -1,9 +1,7 @@
-/* Variable for breakpoint */
 $breakpoint-1: 425px;
 $breakpoint-2: 768px;
 $breakpoint-3: 1024px;
 
-/* Media Query */
 @mixin breakpoint-small() {
   @media screen and (max-width: $breakpoint-1){
     @content

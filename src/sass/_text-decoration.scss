@@ -1,27 +1,3 @@
-/*
-Author: Hung Pham
- */
-@import 'media-queries';
-
 .strike       { text-decoration: line-through; }
 .underline    { text-decoration: underline; }
 .no-underline { text-decoration: none; }
-
-//Mixins Media Query
-@include breakpoint-small(){
-  .strike-s       { text-decoration: line-through; }
-  .underline-s    { text-decoration: underline; }
-  .no-underline-s { text-decoration: none; }
-}
-
-@include breakpoint-medium(){
-  .strike-m       { text-decoration: line-through; }
-  .underline-m    { text-decoration: underline; }
-  .no-underline-m { text-decoration: none; }
-}
-
-@include breakpoint-large(){
-  .strike-l       { text-decoration: line-through; }
-  .underline-l    { text-decoration: underline; }
-  .no-underline-l { text-decoration: none; }
-}
