@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractCSS = require('mini-css-extract-plugin');
 const MinifyCSS = require('optimize-css-assets-webpack-plugin');
 const BrotliCompression = require('brotli-webpack-plugin');
+const GzipCompression = require('compression-webpack-plugin');
 
 
 module.exports = {
@@ -23,6 +24,11 @@ module.exports = {
             test: /\.(js|css|html|svg)$/,
             threshold: 10240,
             minRatio: 0.8
+        }),
+        new GzipCompression({
+            test: /\.(js|css|html|svg)$/,
+            threshold: 10240,
+            minRatio: 0.8,
         }),
     ],
     module: {
