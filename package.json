@@ -1,7 +1,7 @@
 {
   "name": "supercss",
-  "version": "1.0.0",
-  "description": "Just a mini library CSS to help people create Front-end base on Google AMP rule",
+  "version": "1.0.1",
+  "description": "A mini Library get idea from Tachyons CSS Kit and follow Atomic CSS to help programmer build front-end base on AMP Rule",
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack"
@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^3.0.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
